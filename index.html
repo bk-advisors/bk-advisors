@@ -3,19 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="BK Advisors — Boutique management consulting firm specializing in business development, fund management, portfolio financial management, and data science." />
   <title>BK Advisors - Connecting Dots, Delivering Results.</title>
   <link rel="icon" type="image/png" href="./assets/bka_simple.png" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  <!-- AOS - Animate on Scroll -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <nav class="navbar navbar-expand-lg" id="mainNav">
     <div class="container">
-      <a class="navbar-brand" href="#">BK Advisors</a>
+      <a class="navbar-brand" href="#">
+        <img src="./assets/bka_simple.png" alt="BK Advisors" height="36">
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -35,23 +44,31 @@
   <!-- Hero Section -->
   <section id="home" class="hero-section d-flex align-items-center text-center">
     <div class="container">
-      <h1 class="display-4 text-white">BK Advisors</h1>
-      <p class="lead text-white">Connecting Dots, Delivering Results.</p>
-      <a href="#contact" class="btn btn-primary">Get in Touch</a>
+      <h1 class="display-3 text-white" data-aos="fade-up" data-aos-duration="800">
+        BK Advisors
+      </h1>
+      <p class="lead text-white mb-3" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+        Connecting Dots, Delivering Results.
+      </p>
+      <p class="hero-sub" data-aos="fade-up" data-aos-delay="300" data-aos-duration="800">
+        Boutique management consulting for the public and private sector.
+      </p>
+      <a href="#contact" class="btn btn-hero" data-aos="fade-up" data-aos-delay="400">
+        Get in Touch
+      </a>
     </div>
   </section>
 
   <!-- About Section -->
-  <section id="about" class="py-5">
+  <section id="about">
     <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-6">
-          <!-- Replace with a relevant image -->
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6" data-aos="fade-right" data-aos-duration="700">
           <img src="./assets/BKA_Enhanced_Logo_Apr2025.png" alt="About BK Advisors" class="img-fluid rounded" />
         </div>
-        <div class="col-md-6">
-          <h2>About Us</h2>
-          <p>
+        <div class="col-lg-6" data-aos="fade-left" data-aos-duration="700" data-aos-delay="200">
+          <h2 class="section-title text-start">About Us</h2>
+          <p class="mt-4" style="font-size: 1.1rem; line-height: 1.8;">
             BK Advisors is a boutique management consulting firm focusing on advisory services for the public and private sector.
             We specialize in business development, fund management, portfolio financial management, and data management & science, helping our clients drive impact and achieve sustainable outcomes.
           </p>
@@ -61,222 +78,82 @@
   </section>
 
   <!-- Services Section -->
-  <section id="services" class="py-5 bg-light">
+  <section id="services" class="bg-alt">
     <div class="container">
-      <h2 class="text-center mb-5">Our Services</h2>
-      <div class="services-scroll">
-        <div class="d-flex flex-nowrap">
+      <h2 class="section-title text-center">Our Services</h2>
+      <p class="section-subtitle text-center">
+        Expert advisory across business development, finance, and data science.
+      </p>
+      <div class="row g-4">
         <!-- Service Card: Business Development -->
-          <div class="col-10 col-md-4 col-lg-3 px-2">
-          <div class="card service-card h-100 border-0 shadow-sm">
-          <div class="card-body text-center p-4">
-            <div class="service-icon mb-4">
-              <i class="bi bi-graph-up-arrow"></i>
-            </div>
-            <h5 class="card-title">Business Development</h5>
-            <p class="card-text">Seasoned experts in business development for impact, helping organizations grow sustainably.</p>
-            <a href="https://bk-advisors.github.io/" class="btn btn-outline-primary mt-3">Learn More</a>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Service Card: Fund/Grants Management -->
-      <div class="col-10 col-md-4 col-lg-3 px-2">
-        <div class="card service-card h-100 border-0 shadow-sm">
-          <div class="card-body text-center p-4">
-            <div class="service-icon mb-4">
-              <i class="bi bi-cash-stack"></i>
-            </div>
-            <h5 class="card-title">Fund/Grants Management</h5>
-            <p class="card-text">Expert guidance on managing and optimizing funds and grants for sustainable development initiatives.</p>
-            <a href="https://bk-advisors.github.io/" class="btn btn-outline-primary mt-3">Learn More</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Service Card: Supply Chain Management -->
-      <div class="col-10 col-md-4 col-lg-3 px-2">
-        <div class="card service-card h-100 border-0 shadow-sm">
-          <div class="card-body text-center p-4">
-            <div class="service-icon mb-4">
-              <i class="bi bi-truck"></i>
-            </div>
-            <h5 class="card-title">Supply Chain Management</h5>
-            <p class="card-text">End-to-end solutions, including procurement strategy, logistics optimization, and vendor management, ensuring seamless delivery of goods and services while reducing costs and risks.</p>
-            <a href="https://bk-advisors.github.io/" class="btn btn-outline-primary mt-3">Learn More</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Service Card: Monitoring & Evaluation -->
-      <div class="col-10 col-md-4 col-lg-3 px-2">
-        <div class="card service-card h-100 border-0 shadow-sm">
-          <div class="card-body text-center p-4">
-            <div class="service-icon mb-4">
-              <i class="bi bi-display"></i>
-            </div>
-            <h5 class="card-title">Monitoring & Evaluation</h5>
-            <p class="card-text">Our services include performance tracking, outcome assessment, and real-time reporting, enabling data-driven adjustments to maximize project success and accountability.</p>
-            <a href="https://bk-advisors.github.io/" class="btn btn-outline-primary mt-3">Learn More</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Service Card: Portfolio Financial Management -->
-      <div class="col-10 col-md-4 col-lg-3 px-2">
-        <div class="card service-card h-100 border-0 shadow-sm">
-          <div class="card-body text-center p-4">
-            <div class="service-icon mb-4">
-              <i class="bi bi-pie-chart"></i>
-            </div>
-            <h5 class="card-title">Portfolio Financial Management</h5>
-            <p class="card-text">Strategic services to ensure robust financial oversight across your project portfolio.</p>
-            <a href="https://bk-advisors.github.io/" class="btn btn-outline-primary mt-3">Learn More</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Service Card: Data Management & Science -->
-      <div class="col-10 col-md-4 col-lg-3 px-2">
-        <div class="card service-card h-100 border-0 shadow-sm">
-          <div class="card-body text-center p-4">
-            <div class="service-icon mb-4">
-              <i class="bi bi-database-check"></i>
-            </div>
-            <h5 class="card-title">Data Management & Science</h5>
-            <p class="card-text">Leveraging data-driven insights to inform decisions and maximize development impact.</p>
-            <a href="https://bk-advisors.github.io/" class="btn btn-outline-primary mt-3">Learn More</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-  <!-- Blog Section -->
-<section id="blog" class="py-5">
-  <div class="container">
-    <h2 class="text-center mb-4" > <a href="https://bk-advisors.github.io/"> Insights & Analysis</a></h2>
-    <div class="blog-scroll">
-      <div class="d-flex flex-nowrap">
-        <!-- Blog Post 1 -->
-      <div class="col-md-4 col-10 px-2">
-        <div class="card mb-4 shadow-sm">
-          <img src="./assets/govt-health-spend.png" class="card-img-top" alt="Blog Post 1">
-          <div class="card-body">
-            <h5 class="card-title">The Cost of Staying Alive in Uganda</h5>
-            <p class="card-text">When Health Systems Are Designed To Fail Us.</p>
-            <a href="https://bk-advisors.github.io/" class="btn btn-outline-primary">Read More</a>
-          </div>
-        </div>
-      </div>
-      <!-- Blog Post 2 -->
-      <div class="col-md-4 col-10 px-2">
-        <div class="card mb-4 shadow-sm">
-          <img src="./assets/grants-mgt.jpg" class="card-img-top" alt="Blog Post 2">
-          <div class="card-body">
-            <h5 class="card-title">Grants Management for Beginners</h5>
-            <p class="card-text">Best Practices in donor reporting and compliance for first
-              time grant recipients.</p>
-            <a href="https://bk-advisors.github.io/" class="btn btn-outline-primary">Read More</a>
-          </div>
-        </div>
-      </div>
-      <!-- Blog Post 3 -->
-      <div class="col-md-4 col-10 px-2">
-        <div class="card mb-4 shadow-sm">
-          <img src="./assets/barchart-v2.png" class="card-img-top" alt="Blog Post 2">
-          <div class="card-body">
-            <h5 class="card-title">Trade Under Guard</h5>
-            <p class="card-text">A short story about securing the national interest.</p>
-            <a href="https://bk-advisors.github.io/" class="btn btn-outline-primary">Read More</a>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Blog Post 4 -->
-      <div class="col-md-4 col-10 px-2">
-        <div class="card mb-4 shadow-sm">
-          <img src="./assets/slide8-graphic.jpg" class="card-img-top" alt="Blog Post 2">
-          <div class="card-body">
-            <h5 class="card-title">Case Study #1 : A Solution for Disbursement Delays</h5>
-            <p class="card-text">An step by step explainer video.</p>
-            <a href="https://bk-advisors.github.io/" class="btn btn-outline-primary">Read More</a>
-          </div>
-        </div>
-      </div>
-            
-      <!-- Blog Post 5 -->
-      
-    </div>
-  </div>
-</section>
-
-  <!-- Clients Section -->
-<section id="clients" class="py-5 bg-light">
-  <div class="container">
-    <h2 class="text-center mb-4">Our Experience and Footprint</h2>
-    <div class="row row-cols-2 row-cols-md-4 g-4 justify-content-center align-items-center">
-      <!-- Client Logo 1 -->
-      <div class="col text-center">
-        <img src="./assets/who.png" alt="WHO" class="img-fluid client-logo p-3">
-      </div>
-      <!-- Client Logo 2 -->
-      <div class="col text-center">
-        <img src="./assets/unicef.png" alt="UNICEF" class="img-fluid client-logo p-3">
-      </div>
-      <!-- Client Logo 3 -->
-      <div class="col text-center">
-        <img src="./assets/ilo.jpg" alt="ILO" class="img-fluid client-logo p-3">
-      </div>
-      <!-- Client Logo 4 -->
-      <div class="col text-center">
-        <img src="./assets/bou.png" alt="Bank of Uganda" class="img-fluid client-logo p-3">
-      </div>
-      <!-- Client Logo 5 -->
-      <div class="col text-center">
-        <img src="./assets/deloitte.png" alt="DTT" class="img-fluid client-logo p-3">
-      </div>
-      <!-- Client Logo 6 -->
-      <div class="col text-center">
-        <img src="./assets/jms.png" alt="JMS" class="img-fluid client-logo p-3">
-      </div>
-      <!-- Client Logo 7 -->
-      <div class="col text-center">
-        <img src="./assets/chai.jpg" alt="CHAI" class="img-fluid client-logo p-3">
-      </div>
-      <!-- Client Logo 8 -->
-      <div class="col text-center">
-        <img src="./assets/gavi.png" alt="Gavi" class="img-fluid client-logo p-3">
-      </div>
-      <!-- Add more client logos as needed -->
-    </div>
-  </div>
-</section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="py-5">
-    <div class="container">
-      <h2 class="text-center mb-4">Contact Us</h2>
-      <div class="row justify-content-center">
-        <div class="col-md-8 text-center">
-          <div class="card shadow-sm">
-            <div class="card-body">
-              <div class="mb-4">
-                <h5 class="mb-3"><i class="bi bi-envelope"></i> Email</h5>
-                <p><a href="mailto:info@bk-advisors.com" class="text-decoration-none">info@bk-advisors.com</a></p>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+          <div class="card service-card h-100 border-0">
+            <div class="card-body text-center p-4">
+              <div class="service-icon mb-4">
+                <i class="bi bi-graph-up-arrow"></i>
               </div>
-              <div class="mb-4">
-                <h5 class="mb-3"><i class="bi bi-telephone"></i> Phone</h5>
-                <p><a href="tel:+256706067-100" class="text-decoration-none">+256 (774) 235-505</a></p>
-                <p><a href="tel:+256775327034" class="text-decoration-none">+256 (775) 327-034</a></p>
+              <h5 class="card-title">Business Development</h5>
+              <p class="card-text">Seasoned experts in business development for impact, helping organizations grow sustainably.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Service Card: Fund/Grants Management -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card service-card h-100 border-0">
+            <div class="card-body text-center p-4">
+              <div class="service-icon mb-4">
+                <i class="bi bi-cash-stack"></i>
               </div>
-              <div class="mb-4">
-                <h5 class="mb-3"><i class="bi bi-geo-alt"></i> Address</h5>
-                <p>P.O.Box 23474<br>                  
-                  Kampala , KLA 256<br>
-                  Uganda</p>
+              <h5 class="card-title">Fund/Grants Management</h5>
+              <p class="card-text">Expert guidance on managing and optimizing funds and grants for sustainable development initiatives.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Service Card: Supply Chain Management -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="card service-card h-100 border-0">
+            <div class="card-body text-center p-4">
+              <div class="service-icon mb-4">
+                <i class="bi bi-truck"></i>
               </div>
+              <h5 class="card-title">Supply Chain Management</h5>
+              <p class="card-text">End-to-end solutions, including procurement strategy, logistics optimization, and vendor management, ensuring seamless delivery of goods and services while reducing costs and risks.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Service Card: Monitoring & Evaluation -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+          <div class="card service-card h-100 border-0">
+            <div class="card-body text-center p-4">
+              <div class="service-icon mb-4">
+                <i class="bi bi-display"></i>
+              </div>
+              <h5 class="card-title">Monitoring & Evaluation</h5>
+              <p class="card-text">Our services include performance tracking, outcome assessment, and real-time reporting, enabling data-driven adjustments to maximize project success and accountability.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Service Card: Portfolio Financial Management -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card service-card h-100 border-0">
+            <div class="card-body text-center p-4">
+              <div class="service-icon mb-4">
+                <i class="bi bi-pie-chart"></i>
+              </div>
+              <h5 class="card-title">Portfolio Financial Management</h5>
+              <p class="card-text">Strategic services to ensure robust financial oversight across your project portfolio.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Service Card: Data Management & Science -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="card service-card h-100 border-0">
+            <div class="card-body text-center p-4">
+              <div class="service-icon mb-4">
+                <i class="bi bi-database-check"></i>
+              </div>
+              <h5 class="card-title">Data Management & Science</h5>
+              <p class="card-text">Leveraging data-driven insights to inform decisions and maximize development impact.</p>
             </div>
           </div>
         </div>
@@ -284,14 +161,219 @@
     </div>
   </section>
 
+  <!-- Blog Section -->
+  <section id="blog">
+    <div class="container">
+      <h2 class="section-title text-center"><a href="https://bk-advisors.github.io/" class="text-decoration-none" style="color: inherit;">Insights & Analysis</a></h2>
+      <p class="section-subtitle text-center">
+        Expert perspectives on development finance, data science, and sustainable impact.
+      </p>
+      <div class="row g-4">
+        <!-- Blog Post 1 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+          <div class="card blog-card h-100">
+            <div class="card-img-wrapper">
+              <img src="./assets/govt-health-spend.png" class="card-img-top" alt="The Cost of Staying Alive in Uganda">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">The Cost of Staying Alive in Uganda</h5>
+              <p class="card-text text-muted">When Health Systems Are Designed To Fail Us.</p>
+              <a href="https://bk-advisors.github.io/" class="btn btn-outline-primary btn-sm mt-2">Read More</a>
+            </div>
+          </div>
+        </div>
+        <!-- Blog Post 2 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card blog-card h-100">
+            <div class="card-img-wrapper">
+              <img src="./assets/grants-mgt.jpg" class="card-img-top" alt="Grants Management for Beginners">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Grants Management for Beginners</h5>
+              <p class="card-text text-muted">Best Practices in donor reporting and compliance for first time grant recipients.</p>
+              <a href="https://bk-advisors.github.io/" class="btn btn-outline-primary btn-sm mt-2">Read More</a>
+            </div>
+          </div>
+        </div>
+        <!-- Blog Post 3 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="card blog-card h-100">
+            <div class="card-img-wrapper">
+              <img src="./assets/barchart-v2.png" class="card-img-top" alt="Trade Under Guard">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Trade Under Guard</h5>
+              <p class="card-text text-muted">A short story about securing the national interest.</p>
+              <a href="https://bk-advisors.github.io/" class="btn btn-outline-primary btn-sm mt-2">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-5" data-aos="fade-up">
+        <a href="https://bk-advisors.github.io/" class="btn btn-outline-primary px-4 py-2">
+          View All Insights <i class="bi bi-arrow-right ms-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clients Section -->
+  <section id="clients" class="bg-alt">
+    <div class="container">
+      <h2 class="section-title text-center">Our Experience and Footprint</h2>
+      <p class="section-subtitle text-center">
+        Trusted by leading international organizations and institutions.
+      </p>
+      <div class="row row-cols-2 row-cols-md-4 g-4 justify-content-center align-items-center">
+        <div class="col text-center" data-aos="fade-up" data-aos-delay="0">
+          <img src="./assets/who.png" alt="WHO" class="img-fluid client-logo p-3">
+        </div>
+        <div class="col text-center" data-aos="fade-up" data-aos-delay="50">
+          <img src="./assets/unicef.png" alt="UNICEF" class="img-fluid client-logo p-3">
+        </div>
+        <div class="col text-center" data-aos="fade-up" data-aos-delay="100">
+          <img src="./assets/ilo.jpg" alt="ILO" class="img-fluid client-logo p-3">
+        </div>
+        <div class="col text-center" data-aos="fade-up" data-aos-delay="150">
+          <img src="./assets/bou.png" alt="Bank of Uganda" class="img-fluid client-logo p-3">
+        </div>
+        <div class="col text-center" data-aos="fade-up" data-aos-delay="200">
+          <img src="./assets/deloitte.png" alt="Deloitte" class="img-fluid client-logo p-3">
+        </div>
+        <div class="col text-center" data-aos="fade-up" data-aos-delay="250">
+          <img src="./assets/jms.png" alt="JMS" class="img-fluid client-logo p-3">
+        </div>
+        <div class="col text-center" data-aos="fade-up" data-aos-delay="300">
+          <img src="./assets/chai.jpg" alt="CHAI" class="img-fluid client-logo p-3">
+        </div>
+        <div class="col text-center" data-aos="fade-up" data-aos-delay="350">
+          <img src="./assets/gavi.png" alt="Gavi" class="img-fluid client-logo p-3">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-gradient-subtle">
+    <div class="container">
+      <h2 class="section-title text-center">Contact Us</h2>
+      <p class="section-subtitle text-center">
+        Ready to discuss your next project? Reach out to our team.
+      </p>
+      <div class="row g-4 justify-content-center">
+        <!-- Email Card -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="bi bi-envelope"></i>
+            </div>
+            <h5>Email</h5>
+            <p><a href="mailto:info@bk-advisors.com" class="text-decoration-none">info@bk-advisors.com</a></p>
+          </div>
+        </div>
+        <!-- Phone Card -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="bi bi-telephone"></i>
+            </div>
+            <h5>Phone</h5>
+            <p><a href="tel:+256774235505" class="text-decoration-none">+256 (774) 235-505</a></p>
+            <p><a href="tel:+256775327034" class="text-decoration-none">+256 (775) 327-034</a></p>
+          </div>
+        </div>
+        <!-- Address Card -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="bi bi-geo-alt"></i>
+            </div>
+            <h5>Address</h5>
+            <p>P.O.Box 23474<br>Kampala, KLA 256<br>Uganda</p>
+          </div>
+        </div>
+        <!-- Book a Call Card -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="bi bi-calendar-check"></i>
+            </div>
+            <h5>Book a Call</h5>
+            <p>Schedule an introductory call with our team.</p>
+            <a href="https://calendly.com/bk-advisors" target="_blank" rel="noopener noreferrer" class="btn btn-hero btn-sm">Schedule Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
-  <footer class="bg-dark text-white py-3">
-    <div class="container text-center">
-      <p>&copy; 2025 BK Advisors. All Rights Reserved.</p>
+  <footer class="footer">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Brand & Social -->
+        <div class="col-lg-4">
+          <h5>BK Advisors</h5>
+          <p>Boutique management consulting firm focusing on advisory services for the public and private sector.</p>
+          <div class="mt-3">
+            <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="social-icon"><i class="bi bi-twitter-x"></i></a>
+            <a href="mailto:info@bk-advisors.com" class="social-icon"><i class="bi bi-envelope"></i></a>
+          </div>
+        </div>
+        <!-- Quick Links -->
+        <div class="col-lg-4">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#about">About Us</a></li>
+            <li class="mb-2"><a href="#services">Services</a></li>
+            <li class="mb-2"><a href="blog.html">Blog & Insights</a></li>
+            <li class="mb-2"><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Contact Info -->
+        <div class="col-lg-4">
+          <h5>Get in Touch</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><i class="bi bi-envelope me-2"></i>info@bk-advisors.com</li>
+            <li class="mb-2"><i class="bi bi-telephone me-2"></i>+256 (774) 235-505</li>
+            <li class="mb-2"><i class="bi bi-geo-alt me-2"></i>Kampala, Uganda</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-divider text-center">
+        <p class="mb-0">&copy; 2026 BK Advisors. All Rights Reserved.</p>
+      </div>
     </div>
   </footer>
 
   <!-- Bootstrap JS (including Popper) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS - Animate on Scroll -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 700,
+      easing: 'ease-out-cubic',
+      once: true,
+      offset: 80
+    });
+
+    // Navbar: transparent over hero -> frosted glass on scroll
+    (function() {
+      var nav = document.getElementById('mainNav');
+      if (!nav) return;
+      function onScroll() {
+        if (window.scrollY > 50) {
+          nav.classList.add('scrolled');
+        } else {
+          nav.classList.remove('scrolled');
+        }
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+  </script>
 </body>
 </html>
